@@ -1,22 +1,22 @@
-[tool.poetry]
+[build-system]
+requires = ["poetry-core>=1.0.0", "setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
 name = "rich-dataframe"
-version = "0.2.0"
+version = "0.2.1"
 description = "Create animated and pretty Pandas Dataframe"
-authors = ["khuyentran1401 <khuyentran1476@gmail.com>"]
-homepage = "https://github.com/khuyentran1401/rich-dataframe"
-repository = "https://github.com/khuyentran1401/rich-dataframe"
 keywords = ['pandas']
 readme = "README.md"
-exclude= ["prettify_table.gif"]
-license = "Apache-2.0"
-
-[tool.poetry.dependencies]
+license = {text = "Apache 2.0"}
+requires-python = ">=3.7"
 dependencies = [
-  "python >= 3.7.1",
   "rich >= 12.5.1",
-  "sklearn >= 1.1.2",
   "pandas >= 1.4.4",
 ]
+
+[tool.distutils.bdist_wheel]
+universal = true
 
 [tool.black]
 line-length = 79
@@ -34,7 +34,3 @@ exclude = '''
   | dist
 )/
 '''
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
