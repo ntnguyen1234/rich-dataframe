@@ -1,5 +1,9 @@
 [build-system]
-requires = ["poetry-core>=1.0.0", "setuptools", "setuptools-scm"]
+requires = [
+  "poetry-core>=1.0.0", 
+  "setuptools", 
+  "setuptools-scm"
+]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -17,6 +21,9 @@ dependencies = [
 
 [tool.distutils.bdist_wheel]
 universal = true
+
+[tool.setuptools]
+packages = ["rich_dataframe"]
 
 [tool.black]
 line-length = 79
